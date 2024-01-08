@@ -46,7 +46,7 @@ const Home = (props) => {
             Web/Mobile Developer, Sales Engineer, and AI enthusiast. From coding cool projects to leading enterprise wins at large SaaS companies, I bring tech to life. Check out some of my work here and let's chat tech! 👋
           </Text>
           <Box paddingTop="space50">
-            Have more questions? Ask my <Button
+            Have questions for me? Ask my <Button
               size="small"
               onClick={()=>{
                 changePage(<ChatAssistant AppContext={props.AppContext} />);
@@ -56,7 +56,7 @@ const Home = (props) => {
             </Button>
           </Box>
           <Box paddingTop="space50">
-            <Text>Want to see the React code? Check out the code here:</Text>
+            <Text>Want to see the ReactJS code this website is built on? </Text>
             <a target='_blank' rel="noreferrer" href="https://github.com/khurananick/khurananick.github.io">https://github.com/khurananick/khurananick.github.io</a>
           </Box>
           <Separator orientation="horizontal" verticalSpacing="space80" horizontalSpacing="200px" />
