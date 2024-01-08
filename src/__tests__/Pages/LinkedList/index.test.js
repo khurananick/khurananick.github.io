@@ -1,5 +1,9 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import LinkedList from '../../Pages/LinkedList';
+import { render, screen } from '@testing-library/react';
+import LinkedList from '../../../Pages/LinkedList/index.js'
+
+beforeAll(() => {
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+});
 
 test('LinkedList page has "Add Node" and "Reset List"', () => {
   render(<LinkedList />);

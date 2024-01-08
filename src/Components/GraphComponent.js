@@ -9,7 +9,7 @@ const GraphComponent = (props) => {
   const elements = props.elements;
 
   if(props.type === "popper") {
-    Cytoscape.use(Popper);
+    // Cytoscape.use(Popper);
   }
   else {
     Cytoscape.use(Dagre);
