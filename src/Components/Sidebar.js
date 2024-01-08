@@ -22,6 +22,9 @@ import { Box } from '@twilio-paste/core/box';
 import Home from "../Pages/Home/index.js";
 import ChatAssistant from "../Pages/ChatAssistant/index.js";
 import Heap from "../Pages/Heap/index.js";
+import Stack from "../Pages/Stack/index.js";
+import Queue from "../Pages/Queue/index.js";
+
 import BubbleSort from '../Pages/BubbleSort/index.js';
 import HeapSort from '../Pages/HeapSort/index.js';
 
@@ -106,6 +109,30 @@ const SidebarComponent = (props) => {
               }}
             >
               Heap
+            </SidebarNavigationItem>
+          </SidebarNavigationDisclosureContent>
+          <SidebarNavigationDisclosureContent>
+            <SidebarNavigationItem 
+              data-testid="stack_button"
+              selected={selected === 'stack'}
+              onClick={() => {
+                setSelected('stack')
+                changePage(<Stack />)
+              }}
+            >
+              Stack
+            </SidebarNavigationItem>
+          </SidebarNavigationDisclosureContent>
+          <SidebarNavigationDisclosureContent>
+            <SidebarNavigationItem 
+              data-testid="queue_button"
+              selected={selected === 'queue'}
+              onClick={() => {
+                setSelected('queue')
+                changePage(<Queue />)
+              }}
+            >
+              Queue
             </SidebarNavigationItem>
           </SidebarNavigationDisclosureContent>
         </SidebarNavigationDisclosure>

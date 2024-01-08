@@ -33,6 +33,32 @@ test('Sidebar component can navigate to Heap', async () => {
   });
 });
 
+test('Sidebar component can navigate to Stack', async () => {
+  render(<App />)
+
+  const element = screen.getByTestId('stack_button');
+  expect(element).toBeInTheDocument();
+
+  fireEvent.click(element)
+
+  await waitFor(() => {
+    expect(screen.getByText(/Reset Stack/i)).toBeInTheDocument();
+  });
+});
+
+test('Sidebar component can navigate to Queue', async () => {
+  render(<App />)
+
+  const element = screen.getByTestId('queue_button');
+  expect(element).toBeInTheDocument();
+
+  fireEvent.click(element)
+
+  await waitFor(() => {
+    expect(screen.getByText(/Reset Queue/i)).toBeInTheDocument();
+  });
+});
+
 test('Sidebar component can navigate to Bubble Sort', async () => {
   render(<App />)
 
