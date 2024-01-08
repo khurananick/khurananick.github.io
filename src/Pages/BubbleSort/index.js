@@ -8,8 +8,9 @@ import DisplayComponent from "./components/DisplayComponent";
 import startBubbleSort from "./helpers/startBubbleSortFunction";
 import CodeModal from "../../Components/CodeModal";
 
+const startArray = [1,2,3,4,5,6,7,8,9,10];
+
 const BubbleSort = () => {
-  const startArray = [1,2,3,4,5,6,7,8,9,10];
   const [array, setArray] = useState([]);
   const dialog = useSideModalState({});
 

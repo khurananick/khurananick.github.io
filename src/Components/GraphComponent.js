@@ -1,6 +1,6 @@
 import Cytoscape from 'cytoscape';
 import Dagre from 'cytoscape-dagre';
-import Popper from 'cytoscape-popper';
+// import Popper from 'cytoscape-popper';
 
 // doesn't load in jest as from 'react-cytoscapejs' so we have to import it directly
 import CytoscapeComponent from '../../node_modules/react-cytoscapejs/dist/react-cytoscape';

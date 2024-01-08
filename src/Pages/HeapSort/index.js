@@ -11,8 +11,9 @@ import GraphComponent from '../../Components/GraphComponent';
 import Heapify from './helpers/Heapify';
 const heapify = new Heapify();
 
+const startArray = [1,2,3,4,5,6,7,8,9,10];
+
 const HeapSort = () => {
-  const startArray = [1,2,3,4,5,6,7,8,9,10];
   const dialog = useRef(null);
   const [state, setState] = useState({ array: [], heap: [] });
 
