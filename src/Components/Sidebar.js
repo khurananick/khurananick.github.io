@@ -21,6 +21,7 @@ import { Box } from '@twilio-paste/core/box';
 
 import Home from "../Pages/Home/index.js";
 import ChatAssistant from "../Pages/ChatAssistant/index.js";
+import LinkedList from "../Pages/LinkedList/index.js";
 import Heap from "../Pages/Heap/index.js";
 import Stack from "../Pages/Stack/index.js";
 import Queue from "../Pages/Queue/index.js";
@@ -109,6 +110,18 @@ const SidebarComponent = (props) => {
               }}
             >
               Heap
+            </SidebarNavigationItem>
+          </SidebarNavigationDisclosureContent>
+          <SidebarNavigationDisclosureContent>
+            <SidebarNavigationItem 
+              data-testid="linked_list_button"
+              selected={selected === 'linked_list'}
+              onClick={() => {
+                setSelected('linked_list ')
+                changePage(<LinkedList />)
+              }}
+            >
+              Linked List
             </SidebarNavigationItem>
           </SidebarNavigationDisclosureContent>
           <SidebarNavigationDisclosureContent>
