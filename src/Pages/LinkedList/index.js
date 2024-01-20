@@ -5,6 +5,8 @@ import { Flex } from "@twilio-paste/core/flex";
 import { Box } from '@twilio-paste/core/box';
 import { Text } from '@twilio-paste/core/text';
 import { useSideModalState } from '@twilio-paste/core/side-modal';
+import { Alert } from '@twilio-paste/core/alert';
+import { Anchor } from '@twilio-paste/core/anchor';
 
 import GraphComponent from '../../Components/GraphComponent';
 import ControlsComponent from './components/ControlsComponent';
@@ -26,6 +28,15 @@ const LinkedList = () => {
     <Flex wrap>
       <Box width="100%" padding="space50" backgroundColor="colorBackground">
         <ControlsComponent dialog={dialog} list={list} toggleReload={toggleReload} />
+      </Box>
+      <Box width="100%" padding="space50">
+        <Alert variant="neutral">
+          <strong>INFO:</strong> 
+          <Box>This is an example of Linked Lists shown using React. Add a noee or remove node by clicking it to see how the list changes.</Box>
+          <Anchor href="https://github.com/khurananick/khurananick.github.io/blob/main/src/Pages/LinkedList/index.js" showExternal target="_blank" rel="noopener noreferrer">
+            Here is the source code.
+          </Anchor>
+        </Alert>
       </Box>
       <ErrorBoundary fallback={<Text>Error loading GraphComponent</Text>}>
         <Box width="100%" onClick={()=>dialog.hide()} padding={"space80"}>

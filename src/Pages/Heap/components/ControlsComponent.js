@@ -7,20 +7,20 @@ const ControlsComponent = (props) => {
   return (
       <Flex hAlignContent={"center"}>
         <ButtonGroup attached>
-          <Button variant="secondary" onClick={() =>{
+          <Button variant="secondary" data-testid="AddRandom" onClick={() =>{
             const random = Math.floor(Math.random() * 20);
             props.minHeap.insert(random);
             props.maxHeap.insert(random);
             props.setRefresh(!props.refresh);
           }}>Add Random
           </Button>
-          <Button variant="destructive_secondary" onClick={() =>{
+          <Button variant="destructive_secondary" data-testid="RemoveTop" onClick={() =>{
             props.minHeap.removeTop();
             props.maxHeap.removeTop();
             props.setRefresh(!props.refresh);
           }}> Remove Top
         </Button>
-          <Button variant="secondary" onClick={() =>{
+          <Button variant="secondary" data-testid="Reset" onClick={() =>{
             props.minHeap.reset()
             props.maxHeap.reset();
             props.setRefresh(!props.refresh);

@@ -4,14 +4,14 @@ import Stack from '../../Pages/Stack';
 test('stack page has "Remove" and "Reset Stack"', () => {
   render(<Stack />);
 
-  expect(screen.getByText(/Remove/i)).toBeInTheDocument();
-  expect(screen.getByText(/Reset Stack/i)).toBeInTheDocument();
+  expect(screen.getByTestId("Remove")).toBeInTheDocument();
+  expect(screen.getByTestId("ResetStack")).toBeInTheDocument();
 });
 
 test('stack page "Remove" button removes from stack', async () => {
   render(<Stack />);
 
-  const elem = screen.getByText(/Remove/i)
+  const elem = screen.getByTestId("Remove")
 
   fireEvent.click(elem)
 
@@ -23,7 +23,7 @@ test('stack page "Remove" button removes from stack', async () => {
 test('stack page "Add" button adds to stack', async () => {
   render(<Stack />);
 
-  const elem = screen.getByText(/Add/i)
+  const elem = screen.getByTestId("Add")
 
   fireEvent.click(elem)
 

@@ -5,6 +5,8 @@ import { Flex } from "@twilio-paste/core/flex";
 import { Box } from '@twilio-paste/core/box';
 import { Text } from '@twilio-paste/core/text';
 import { useSideModalState } from '@twilio-paste/core/side-modal';
+import { Alert } from '@twilio-paste/core/alert';
+import { Anchor } from '@twilio-paste/core/anchor';
 
 import { ErrorBoundary } from "react-error-boundary";
 
@@ -31,6 +33,15 @@ const Heap = (props) => {
           refresh={refresh}
           dialog={dialog}
           setRefresh={setRefresh} />
+      </Box>
+      <Box width="100%" padding="space50">
+        <Alert variant="neutral">
+          <strong>INFO:</strong> 
+          <Box>This is an example of Heaps shown using React. Add a random element or remove top to see how the Heap changes.</Box>
+          <Anchor href="https://github.com/khurananick/khurananick.github.io/blob/main/src/Pages/Heap/index.js" showExternal target="_blank" rel="noopener noreferrer">
+            Here is the source code.
+          </Anchor>
+        </Alert>
       </Box>
       <Box width="100%" padding="space50"></Box>
       <ErrorBoundary fallback={<Text>Error loading GraphComponent</Text>}>

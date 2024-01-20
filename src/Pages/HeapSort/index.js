@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { Flex } from '@twilio-paste/core/flex';
 import { Box } from '@twilio-paste/core/box';
 import { Text } from '@twilio-paste/core/text';
+import { Alert } from '@twilio-paste/core/alert';
+import { Anchor } from '@twilio-paste/core/anchor';
 
 import { ErrorBoundary } from 'react-error-boundary';
 
@@ -11,9 +13,8 @@ import GraphComponent from '../../Components/GraphComponent';
 import Heapify from './helpers/Heapify';
 const heapify = new Heapify();
 
-const startArray = [1,2,3,4,5,6,7,8,9,10];
-
 const HeapSort = () => {
+  const startArray = [1,2,3,4,5,6,7,8,9,10];
   const dialog = useRef(null);
   const [state, setState] = useState({ array: [], heap: [] });
 
@@ -42,6 +43,15 @@ const HeapSort = () => {
     <Flex grow wrap hAlignContent={"center"}>
       <Box width="100%" padding="space50" backgroundColor={"colorBackground"}>
         <ControlsComponent doReset={doReset} dialog={dialog} />
+      </Box>
+      <Box width="100%" padding="space50">
+        <Alert variant="neutral">
+          <strong>INFO:</strong> 
+          <Box>This is an animation of Heap Sort using React.</Box>
+          <Anchor href="https://github.com/khurananick/khurananick.github.io/blob/main/src/Pages/HeapSort/index.js" showExternal target="_blank" rel="noopener noreferrer">
+            Here is the source code.
+          </Anchor>
+        </Alert>
       </Box>
       <Box width="100%" padding="space50">
         <Flex wrap hAlignContent={"center"}>

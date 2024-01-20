@@ -29,7 +29,7 @@ test('Sidebar component can navigate to Heap', async () => {
   fireEvent.click(element)
 
   await waitFor(() => {
-    expect(screen.getByText(/Remove Top/i)).toBeInTheDocument();
+    expect(screen.getByTestId("RemoveTop")).toBeInTheDocument();
   });
 });
 

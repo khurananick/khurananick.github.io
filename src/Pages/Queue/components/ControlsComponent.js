@@ -7,18 +7,18 @@ const ControlsComponent = (props) => {
   return (
       <Flex hAlignContent={"center"}>
         <ButtonGroup attached>
-          <Button variant="secondary" onClick={() =>{
+          <Button variant="secondary" data-testid="Enqueue" onClick={() =>{
             const last = props.queue.last();
             props.queue.enqueue(last + 1)
             props.setArray([...props.queue.queue])
           }}>Enqueue
           </Button>
-          <Button variant="destructive_secondary" onClick={() =>{
+          <Button variant="destructive_secondary" data-testid="Dequeue" onClick={() =>{
             props.queue.dequeue()
             props.setArray([...props.queue.queue])
           }}>Dequeue
         </Button>
-          <Button variant="secondary" onClick={() =>{
+          <Button variant="secondary" data-testid="ResetQueue" onClick={() =>{
             props.queue.reset()
             props.setArray([...props.queue.queue])
           }}> Reset Queue

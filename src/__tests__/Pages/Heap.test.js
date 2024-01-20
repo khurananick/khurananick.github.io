@@ -8,8 +8,8 @@ beforeAll(() => {
 test('heap page has "Remove Top" and "Reset"', () => {
   render(<Heap />);
 
-  expect(screen.getByText(/Remove Top/i)).toBeInTheDocument();
-  expect(screen.getByText(/Reset/i)).toBeInTheDocument();
+  expect(screen.getByTestId("RemoveTop")).toBeInTheDocument();
+  expect(screen.getByTestId("Reset")).toBeInTheDocument();
 });
 
 test('heap page has "Error loading GraphComponent"', () => {

@@ -4,14 +4,14 @@ import Queue from '../../Pages/Queue';
 test('queue page has "Dequeue" and "Reset Queue"', () => {
   render(<Queue />);
 
-  expect(screen.getByText(/Dequeue/i)).toBeInTheDocument();
-  expect(screen.getByText(/Reset Queue/i)).toBeInTheDocument();
+  expect(screen.getByTestId("Dequeue")).toBeInTheDocument();
+  expect(screen.getByTestId("ResetQueue")).toBeInTheDocument();
 });
 
 test('queue page "Dequeue" button dequeues from queue', async () => {
   render(<Queue />);
 
-  const elem = screen.getByText(/Dequeue/i)
+  const elem = screen.getByTestId("Dequeue")
 
   fireEvent.click(elem)
 
@@ -23,7 +23,7 @@ test('queue page "Dequeue" button dequeues from queue', async () => {
 test('queue page "Enqueue" button adds to queue', async () => {
   render(<Queue />);
 
-  const elem = screen.getByText(/Enqueue/i)
+  const elem = screen.getByTestId("Enqueue")
 
   fireEvent.click(elem)
 
